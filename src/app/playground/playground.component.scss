@@ -1,0 +1,47 @@
+.animation {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: #000;
+    display: inline-block;
+    animation: move 1s infinite;
+}
+
+@keyframes move {
+    0%   { 
+        top: 100px; 
+    }
+    10%   { 
+        top: 86.87953062188689px; 
+    }
+    20%   { 
+        top: 64.2488303939168px; 
+    }
+    30%   { 
+        top: 43.831310141237346px; 
+    }
+    40%   { 
+        top: 28.484379854933415px; 
+    }
+    50%   { 
+        top: 17.919078331413886px; 
+    }
+    60%   { 
+        top: 11.013228220009694px; 
+    }
+    70%   { 
+        top: 6.651405091699224px; 
+    }
+    80%   { 
+        top: 3.96268440827195px; 
+    }
+    90%   { 
+        top: 2.3351771309402793px; 
+    }
+    100%   { 
+        top: 0; 
+    }
+
+}
+
+
