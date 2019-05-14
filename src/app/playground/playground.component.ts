@@ -9,30 +9,53 @@ import * as _ from 'lodash'
 })
 export class PlaygroundComponent implements OnInit {
 
-  view: any[] = [];
+  options: any;
 
   constructor(private sdofService: SdofService) { }
 
   ngOnInit() {
     const var1 = {
       m: 1,
-      c: 2,
+      c: 1,
       k: 1,
       x: 1,
       v: 0
     };
     const {wn} = this.sdofService.variables(var1.m, var1.c, var1.k);
     const calFunc = this.sdofService.calculate(var1);
-    const tn = 2 * 3.14 / wn;
-    const i = 10;
-    const timeRange = _.range(0, tn, tn / i), displacement = [];
-    console.log(timeRange);
-    timeRange.map(time => {
+    const tn = 2 * 3.14 / wn * 5;
+    const inc = 100;
+    const timeRange = _.range(0, tn, tn / inc);
+    const data = [];
+    const xAxisData = [];
+
+    timeRange.map((time, i) => {
+      xAxisData.push(i);
       ((i) => {
-        displacement.push(calFunc(time) * 100);
+        data.push(calFunc(time) * 100);
       })(i);
     });
-    console.log(displacement)
+    // console.log(data)
+
+
+
+    
+    
+
+    this.options = {      
+      xAxis: {
+        data: xAxisData,       
+      },
+      yAxis: {
+      },
+      series: [{
+        name: 'line',
+        type: 'line',
+        data: data
+      }]
+    };
+
+
   }
 
 }
