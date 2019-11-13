@@ -131,5 +131,10 @@
       }
     }
   },
-  "defaultProject": "sdof"
+  "defaultProject": "sdof",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

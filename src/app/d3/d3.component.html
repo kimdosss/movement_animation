@@ -1,0 +1,45 @@
+<p>Chart</p>
+<div #chart id="chart"></div>
+
+<div class="container">
+    <form [formGroup]="variableForm" (ngSubmit)="onSubmit($event)">
+      <div class="form-group">
+        <label for="mass">Mass</label>
+        <input type="number" class="form-control" formControlName="mass">
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Damping</label>
+        <input type="number" class="form-control" formControlName="damping">
+      </div>
+      <div class="form-group">
+        <label for="name">Stiffness</label>
+        <input type="number" class="form-control" formControlName="stiffness">
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Displacement</label>
+        <input type="number" class="form-control" formControlName="displacement">
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Velocity</label>
+        <input type="number" class="form-control" formControlName="velocity">
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Period</label>
+        <input type="number" class="form-control" formControlName="period">
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Increment</label>
+        <input type="number" class="form-control" formControlName="increment">
+      </div>
+      
+      <button type="submit" class="btn btn-success">Submit</button>
+  
+      <button type="button" class="btn btn-success" (click)="test()">Test</button>
+
+    </form>
+  </div>
