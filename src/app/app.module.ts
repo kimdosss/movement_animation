@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { PlaygroundModule } from './playground/playground.module';
+import { WebglModule } from './webgl/webgl.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PlaygroundModule } from './playground/playground.module';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    PlaygroundModule
+    PlaygroundModule,
+    WebglModule
   ],
   providers: [],
   bootstrap: [AppComponent]
